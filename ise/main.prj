@@ -1,0 +1,3 @@
+verilog work "../rtl/afifo.v"
+verilog work "../rtl/afifo_test.v"
+verilog work "../rtl/main.v"

@@ -1,0 +1,398 @@
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test2/ise/main.xst" -ofn "C:/mierusys/afifo_test2/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test2/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 
+xst -intstyle ise -ifn "C:/mierusys/afifo_test3/ise/main.xst" -ofn "C:/mierusys/afifo_test3/ise/main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/mierusys/afifo_test3/rtl/main.ucf -p xc7a100t-csg324-2 main.ngc main.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol std -t 1 -xt 0 -register_duplication off -r 4 -mt 2 -detail -ir off -pr off -lc off -power off -o main_map.ncd main.ngd main.pcf 
+par -w -intstyle ise -ol std -mt 4 main_map.ncd main.ncd main.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf 
+bitgen -intstyle ise -f main.ut main.ncd 

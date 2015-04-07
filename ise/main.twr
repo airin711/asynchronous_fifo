@@ -1,0 +1,1285 @@
+--------------------------------------------------------------------------------
+Release 14.6 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc7a100t,csg324,C,-2 (PRODUCTION 1.09 2013-06-08)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: gen/clkgen2/dcm/CLKIN1
+  Logical resource: gen/clkgen2/dcm/CLKIN1
+  Location pin: MMCME2_ADV_X1Y2.CLKIN1
+  Clock network: gen/clk_t
+--------------------------------------------------------------------------------
+Slack: 6.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: gen/clkgen2/dcm/CLKIN1
+  Logical resource: gen/clkgen2/dcm/CLKIN1
+  Location pin: MMCME2_ADV_X1Y2.CLKIN1
+  Clock network: gen/clk_t
+--------------------------------------------------------------------------------
+Slack: 6.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: gen/clkgen1/dcm/CLKIN1
+  Logical resource: gen/clkgen1/dcm/CLKIN1
+  Location pin: MMCME2_ADV_X1Y1.CLKIN1
+  Clock network: gen/clk_t
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "gen/clkgen1/CLK_OBUF" derived from  
+NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;  multiplied by 1.25 to 12.500 nS   
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 132352 paths analyzed, 7237 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.376ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Tx_data_11 (SLICE_X58Y37.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.562ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/read_side2/sum_11 (FF)
+  Destination:          Tx_data_11 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.204ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.179ns (-2.127 - -1.948)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/read_side2/sum_11 to Tx_data_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y31.DQ      Tcko                  0.433   afifo_test/read_side2/sum<11>
+                                                       afifo_test/read_side2/sum_11
+    SLICE_X58Y37.C4      net (fanout=3)        4.740   afifo_test/read_side2/sum<11>
+    SLICE_X58Y37.CLK     Tas                   0.031   Tx_data<11>
+                                                       Mmux__n01033
+                                                       Tx_data_11
+    -------------------------------------------------  ---------------------------
+    Total                                      5.204ns (0.464ns logic, 4.740ns route)
+                                                       (8.9% logic, 91.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/read_side1/sum_61 (SLICE_X48Y46.CIN), 1800 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.867ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/mem_FF_144 (FF)
+  Destination:          afifo_test/read_side1/sum_61 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.899ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.179ns (-2.118 - -1.939)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/mem_FF_144 to afifo_test/read_side1/sum_61
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y32.AMUX    Tshcko                0.525   afifo_test/AFIFO1/mem_ff_151
+                                                       afifo_test/AFIFO1/mem_FF_144
+    SLICE_X28Y30.D4      net (fanout=1)        0.718   afifo_test/AFIFO1/mem_ff_144
+    SLICE_X28Y30.CMUX    Topdc                 0.449   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7_F
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.A2      net (fanout=1)        1.476   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.COUT    Topcya                0.545   afifo_test/read_side1/sum<19>
+                                                       afifo_test/read_side1/Maccum_sum_lut<16>
+                                                       afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<23>
+                                                       afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<27>
+                                                       afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<31>
+                                                       afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<35>
+                                                       afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<39>
+                                                       afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<43>
+                                                       afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<47>
+                                                       afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<51>
+                                                       afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<55>
+                                                       afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<59>
+                                                       afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CLK     Tcinck                0.206   afifo_test/read_side1/sum<63>
+                                                       afifo_test/read_side1/Maccum_sum_xor<63>
+                                                       afifo_test/read_side1/sum_61
+    -------------------------------------------------  ---------------------------
+    Total                                      4.899ns (2.705ns logic, 2.194ns route)
+                                                       (55.2% logic, 44.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.916ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/mem_FF_80 (FF)
+  Destination:          afifo_test/read_side1/sum_61 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.852ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.177ns (-2.118 - -1.941)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/mem_FF_80 to afifo_test/read_side1/sum_61
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y30.AQ      Tcko                  0.379   afifo_test/AFIFO1/mem_ff_83
+                                                       afifo_test/AFIFO1/mem_FF_80
+    SLICE_X28Y30.C1      net (fanout=2)        0.810   afifo_test/AFIFO1/mem_ff_80
+    SLICE_X28Y30.CMUX    Tilo                  0.456   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7_G
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.A2      net (fanout=1)        1.476   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.COUT    Topcya                0.545   afifo_test/read_side1/sum<19>
+                                                       afifo_test/read_side1/Maccum_sum_lut<16>
+                                                       afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<23>
+                                                       afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<27>
+                                                       afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<31>
+                                                       afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<35>
+                                                       afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<39>
+                                                       afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<43>
+                                                       afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<47>
+                                                       afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<51>
+                                                       afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<55>
+                                                       afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<59>
+                                                       afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CLK     Tcinck                0.206   afifo_test/read_side1/sum<63>
+                                                       afifo_test/read_side1/Maccum_sum_xor<63>
+                                                       afifo_test/read_side1/sum_61
+    -------------------------------------------------  ---------------------------
+    Total                                      4.852ns (2.566ns logic, 2.286ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.927ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/mem_FF_400 (FF)
+  Destination:          afifo_test/read_side1/sum_61 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.841ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.177ns (-2.118 - -1.941)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/mem_FF_400 to afifo_test/read_side1/sum_61
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y30.AQ      Tcko                  0.379   afifo_test/AFIFO1/mem_ff_403
+                                                       afifo_test/AFIFO1/mem_FF_400
+    SLICE_X28Y30.D2      net (fanout=2)        0.806   afifo_test/AFIFO1/mem_ff_400
+    SLICE_X28Y30.CMUX    Topdc                 0.449   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7_F
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.A2      net (fanout=1)        1.476   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.COUT    Topcya                0.545   afifo_test/read_side1/sum<19>
+                                                       afifo_test/read_side1/Maccum_sum_lut<16>
+                                                       afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<23>
+                                                       afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<27>
+                                                       afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<31>
+                                                       afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<35>
+                                                       afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<39>
+                                                       afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<43>
+                                                       afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<47>
+                                                       afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<51>
+                                                       afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<55>
+                                                       afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<59>
+                                                       afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CLK     Tcinck                0.206   afifo_test/read_side1/sum<63>
+                                                       afifo_test/read_side1/Maccum_sum_xor<63>
+                                                       afifo_test/read_side1/sum_61
+    -------------------------------------------------  ---------------------------
+    Total                                      4.841ns (2.559ns logic, 2.282ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/read_side1/sum_63 (SLICE_X48Y46.CIN), 1800 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.873ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/mem_FF_144 (FF)
+  Destination:          afifo_test/read_side1/sum_63 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.893ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.179ns (-2.118 - -1.939)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/mem_FF_144 to afifo_test/read_side1/sum_63
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y32.AMUX    Tshcko                0.525   afifo_test/AFIFO1/mem_ff_151
+                                                       afifo_test/AFIFO1/mem_FF_144
+    SLICE_X28Y30.D4      net (fanout=1)        0.718   afifo_test/AFIFO1/mem_ff_144
+    SLICE_X28Y30.CMUX    Topdc                 0.449   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7_F
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.A2      net (fanout=1)        1.476   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.COUT    Topcya                0.545   afifo_test/read_side1/sum<19>
+                                                       afifo_test/read_side1/Maccum_sum_lut<16>
+                                                       afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<23>
+                                                       afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<27>
+                                                       afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<31>
+                                                       afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<35>
+                                                       afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<39>
+                                                       afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<43>
+                                                       afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<47>
+                                                       afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<51>
+                                                       afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<55>
+                                                       afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<59>
+                                                       afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CLK     Tcinck                0.200   afifo_test/read_side1/sum<63>
+                                                       afifo_test/read_side1/Maccum_sum_xor<63>
+                                                       afifo_test/read_side1/sum_63
+    -------------------------------------------------  ---------------------------
+    Total                                      4.893ns (2.699ns logic, 2.194ns route)
+                                                       (55.2% logic, 44.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.922ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/mem_FF_80 (FF)
+  Destination:          afifo_test/read_side1/sum_63 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.846ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.177ns (-2.118 - -1.941)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/mem_FF_80 to afifo_test/read_side1/sum_63
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y30.AQ      Tcko                  0.379   afifo_test/AFIFO1/mem_ff_83
+                                                       afifo_test/AFIFO1/mem_FF_80
+    SLICE_X28Y30.C1      net (fanout=2)        0.810   afifo_test/AFIFO1/mem_ff_80
+    SLICE_X28Y30.CMUX    Tilo                  0.456   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7_G
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.A2      net (fanout=1)        1.476   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.COUT    Topcya                0.545   afifo_test/read_side1/sum<19>
+                                                       afifo_test/read_side1/Maccum_sum_lut<16>
+                                                       afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<23>
+                                                       afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<27>
+                                                       afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<31>
+                                                       afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<35>
+                                                       afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<39>
+                                                       afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<43>
+                                                       afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<47>
+                                                       afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<51>
+                                                       afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<55>
+                                                       afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<59>
+                                                       afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CLK     Tcinck                0.200   afifo_test/read_side1/sum<63>
+                                                       afifo_test/read_side1/Maccum_sum_xor<63>
+                                                       afifo_test/read_side1/sum_63
+    -------------------------------------------------  ---------------------------
+    Total                                      4.846ns (2.560ns logic, 2.286ns route)
+                                                       (52.8% logic, 47.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.933ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/mem_FF_400 (FF)
+  Destination:          afifo_test/read_side1/sum_63 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      4.835ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.177ns (-2.118 - -1.941)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/mem_FF_400 to afifo_test/read_side1/sum_63
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y30.AQ      Tcko                  0.379   afifo_test/AFIFO1/mem_ff_403
+                                                       afifo_test/AFIFO1/mem_FF_400
+    SLICE_X28Y30.D2      net (fanout=2)        0.806   afifo_test/AFIFO1/mem_ff_400
+    SLICE_X28Y30.CMUX    Topdc                 0.449   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7_F
+                                                       afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.A2      net (fanout=1)        1.476   afifo_test/AFIFO1/inst_LPM_MUX16_4_f7
+    SLICE_X48Y35.COUT    Topcya                0.545   afifo_test/read_side1/sum<19>
+                                                       afifo_test/read_side1/Maccum_sum_lut<16>
+                                                       afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<19>
+    SLICE_X48Y36.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<23>
+                                                       afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<23>
+    SLICE_X48Y37.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<27>
+                                                       afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<27>
+    SLICE_X48Y38.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<31>
+                                                       afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<31>
+    SLICE_X48Y39.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<35>
+                                                       afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<35>
+    SLICE_X48Y40.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<39>
+                                                       afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<39>
+    SLICE_X48Y41.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<43>
+                                                       afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<43>
+    SLICE_X48Y42.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<47>
+                                                       afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<47>
+    SLICE_X48Y43.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<51>
+                                                       afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<51>
+    SLICE_X48Y44.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<55>
+                                                       afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<55>
+    SLICE_X48Y45.COUT    Tbyp                  0.098   afifo_test/read_side1/sum<59>
+                                                       afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CIN     net (fanout=1)        0.000   afifo_test/read_side1/Maccum_sum_cy<59>
+    SLICE_X48Y46.CLK     Tcinck                0.200   afifo_test/read_side1/sum<63>
+                                                       afifo_test/read_side1/Maccum_sum_xor<63>
+                                                       afifo_test/read_side1/sum_63
+    -------------------------------------------------  ---------------------------
+    Total                                      4.835ns (2.553ns logic, 2.282ns route)
+                                                       (52.8% logic, 47.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PERIOD analysis for net "gen/clkgen1/CLK_OBUF" derived from
+ NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;
+ multiplied by 1.25 to 12.500 nS  
+
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/AFIFO2/Rp_wclk_1 (SLICE_X73Y36.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.004ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               afifo_test/AFIFO2/Rp_1 (FF)
+  Destination:          afifo_test/AFIFO2/Rp_wclk_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.948ns (Levels of Logic = 0)
+  Clock Path Skew:      0.639ns (-1.690 - -2.329)
+  Source Clock:         CLK2 rising at 12.500ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Minimum Data Path at Slow Process Corner: afifo_test/AFIFO2/Rp_1 to afifo_test/AFIFO2/Rp_wclk_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X61Y35.BQ      Tcko                  0.304   afifo_test/AFIFO2/Rp<3>
+                                                       afifo_test/AFIFO2/Rp_1
+    SLICE_X73Y36.BX      net (fanout=259)      0.790   afifo_test/AFIFO2/Rp<1>
+    SLICE_X73Y36.CLK     Tckdi       (-Th)     0.146   afifo_test/write_side2/all_done
+                                                       afifo_test/AFIFO2/Rp_wclk_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.948ns (0.158ns logic, 0.790ns route)
+                                                       (16.7% logic, 83.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Tx_data_1 (SLICE_X56Y34.D5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.016ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               afifo_test/read_side2/sum_1 (FF)
+  Destination:          Tx_data_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.910ns (Levels of Logic = 1)
+  Clock Path Skew:      0.589ns (-1.742 - -2.331)
+  Source Clock:         CLK2 rising at 12.500ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Minimum Data Path at Slow Process Corner: afifo_test/read_side2/sum_1 to Tx_data_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y29.BQ      Tcko                  0.347   afifo_test/read_side2/sum<3>
+                                                       afifo_test/read_side2/sum_1
+    SLICE_X56Y34.D5      net (fanout=3)        0.614   afifo_test/read_side2/sum<1>
+    SLICE_X56Y34.CLK     Tah         (-Th)     0.051   Tx_data<1>
+                                                       Mmux__n010312_F
+                                                       Mmux__n010312
+                                                       Tx_data_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.910ns (0.296ns logic, 0.614ns route)
+                                                       (32.5% logic, 67.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Tx_data_9 (SLICE_X59Y37.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.028ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               afifo_test/read_side2/sum_9 (FF)
+  Destination:          Tx_data_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.926ns (Levels of Logic = 1)
+  Clock Path Skew:      0.593ns (-1.736 - -2.329)
+  Source Clock:         CLK2 rising at 12.500ns
+  Destination Clock:    CLK1 rising at 12.500ns
+  Clock Uncertainty:    0.305ns
+
+  Clock Uncertainty:          0.305ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.278ns
+    Phase Error (PE):           0.161ns
+
+  Minimum Data Path at Slow Process Corner: afifo_test/read_side2/sum_9 to Tx_data_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X62Y31.BQ      Tcko                  0.347   afifo_test/read_side2/sum<11>
+                                                       afifo_test/read_side2/sum_9
+    SLICE_X59Y37.C4      net (fanout=3)        0.717   afifo_test/read_side2/sum<9>
+    SLICE_X59Y37.CLK     Tah         (-Th)     0.138   Tx_data<9>
+                                                       Mmux__n010332
+                                                       Tx_data_9
+    -------------------------------------------------  ---------------------------
+    Total                                      0.926ns (0.209ns logic, 0.717ns route)
+                                                       (22.6% logic, 77.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "gen/clkgen1/CLK_OBUF" derived from
+ NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;
+ multiplied by 1.25 to 12.500 nS  
+
+--------------------------------------------------------------------------------
+Slack: 10.908ns (period - min period limit)
+  Period: 12.500ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: gen/clkgen1/obuf/I0
+  Logical resource: gen/clkgen1/obuf/I0
+  Location pin: BUFGCTRL_X0Y1.I0
+  Clock network: gen/clkgen1/CLK_OBUF
+--------------------------------------------------------------------------------
+Slack: 11.251ns (period - min period limit)
+  Period: 12.500ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: gen/clkgen1/dcm/CLKOUT0
+  Logical resource: gen/clkgen1/dcm/CLKOUT0
+  Location pin: MMCME2_ADV_X1Y1.CLKOUT0
+  Clock network: gen/clkgen1/CLK_OBUF
+--------------------------------------------------------------------------------
+Slack: 11.500ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 12.500ns
+  Low pulse: 6.250ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: afifo_test/write_side2/write_data<3>/CLK
+  Logical resource: afifo_test/write_side2/write_data_0/CK
+  Location pin: SLICE_X72Y29.CLK
+  Clock network: CLK1
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "gen/clkgen2/CLK_OBUF" derived from  
+NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;  divided by 1.60 to 6.250 nS   
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 129347 paths analyzed, 7014 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.206ns.
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/AFIFO1/mem_FF_572 (SLICE_X46Y60.A2), 16 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.044ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Wp_0 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_572 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.882ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.250ns (1.142 - 1.392)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Wp_0 to afifo_test/AFIFO1/mem_FF_572
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y35.AMUX    Tshcko                0.525   afifo_test/AFIFO1/W_bin<4>
+                                                       afifo_test/AFIFO1/Wp_0
+    SLICE_X38Y38.B4      net (fanout=900)      0.883   afifo_test/AFIFO1/Wp<0>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X46Y60.A2      net (fanout=161)      2.513   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X46Y60.CLK     Tas                   0.033   afifo_test/AFIFO1/mem_ff_575
+                                                       afifo_test/AFIFO1/mem_FF_572_dpot
+                                                       afifo_test/AFIFO1/mem_FF_572
+    -------------------------------------------------  ---------------------------
+    Total                                      5.882ns (0.873ns logic, 5.009ns route)
+                                                       (14.8% logic, 85.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.214ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Rp_wclk_2 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_572 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.709ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.253ns (1.142 - 1.395)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Rp_wclk_2 to afifo_test/AFIFO1/mem_FF_572
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y38.CQ      Tcko                  0.433   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/Rp_wclk_2
+    SLICE_X38Y38.B1      net (fanout=1)        0.802   afifo_test/AFIFO1/Rp_wclk<2>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X46Y60.A2      net (fanout=161)      2.513   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X46Y60.CLK     Tas                   0.033   afifo_test/AFIFO1/mem_ff_575
+                                                       afifo_test/AFIFO1/mem_FF_572_dpot
+                                                       afifo_test/AFIFO1/mem_FF_572
+    -------------------------------------------------  ---------------------------
+    Total                                      5.709ns (0.781ns logic, 4.928ns route)
+                                                       (13.7% logic, 86.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.441ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Wp_2 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_572 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.486ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.249ns (1.142 - 1.391)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Wp_2 to afifo_test/AFIFO1/mem_FF_572
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y34.BQ      Tcko                  0.433   afifo_test/AFIFO1/Wp<4>
+                                                       afifo_test/AFIFO1/Wp_2
+    SLICE_X38Y38.B6      net (fanout=10)       0.579   afifo_test/AFIFO1/Wp<2>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X46Y60.A2      net (fanout=161)      2.513   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X46Y60.CLK     Tas                   0.033   afifo_test/AFIFO1/mem_ff_575
+                                                       afifo_test/AFIFO1/mem_FF_572_dpot
+                                                       afifo_test/AFIFO1/mem_FF_572
+    -------------------------------------------------  ---------------------------
+    Total                                      5.486ns (0.781ns logic, 4.705ns route)
+                                                       (14.2% logic, 85.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/AFIFO1/mem_FF_632 (SLICE_X38Y55.B1), 16 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.065ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Wp_0 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_632 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.868ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.243ns (1.149 - 1.392)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Wp_0 to afifo_test/AFIFO1/mem_FF_632
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y35.AMUX    Tshcko                0.525   afifo_test/AFIFO1/W_bin<4>
+                                                       afifo_test/AFIFO1/Wp_0
+    SLICE_X38Y38.B4      net (fanout=900)      0.883   afifo_test/AFIFO1/Wp<0>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X38Y55.B1      net (fanout=161)      2.503   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X38Y55.CLK     Tas                   0.029   afifo_test/AFIFO1/mem_ff_634
+                                                       afifo_test/AFIFO1/mem_FF_632_dpot
+                                                       afifo_test/AFIFO1/mem_FF_632
+    -------------------------------------------------  ---------------------------
+    Total                                      5.868ns (0.869ns logic, 4.999ns route)
+                                                       (14.8% logic, 85.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.235ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Rp_wclk_2 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_632 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.695ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.246ns (1.149 - 1.395)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Rp_wclk_2 to afifo_test/AFIFO1/mem_FF_632
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y38.CQ      Tcko                  0.433   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/Rp_wclk_2
+    SLICE_X38Y38.B1      net (fanout=1)        0.802   afifo_test/AFIFO1/Rp_wclk<2>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X38Y55.B1      net (fanout=161)      2.503   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X38Y55.CLK     Tas                   0.029   afifo_test/AFIFO1/mem_ff_634
+                                                       afifo_test/AFIFO1/mem_FF_632_dpot
+                                                       afifo_test/AFIFO1/mem_FF_632
+    -------------------------------------------------  ---------------------------
+    Total                                      5.695ns (0.777ns logic, 4.918ns route)
+                                                       (13.6% logic, 86.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.462ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Wp_2 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_632 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.472ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.242ns (1.149 - 1.391)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Wp_2 to afifo_test/AFIFO1/mem_FF_632
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y34.BQ      Tcko                  0.433   afifo_test/AFIFO1/Wp<4>
+                                                       afifo_test/AFIFO1/Wp_2
+    SLICE_X38Y38.B6      net (fanout=10)       0.579   afifo_test/AFIFO1/Wp<2>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X38Y55.B1      net (fanout=161)      2.503   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X38Y55.CLK     Tas                   0.029   afifo_test/AFIFO1/mem_ff_634
+                                                       afifo_test/AFIFO1/mem_FF_632_dpot
+                                                       afifo_test/AFIFO1/mem_FF_632
+    -------------------------------------------------  ---------------------------
+    Total                                      5.472ns (0.777ns logic, 4.695ns route)
+                                                       (14.2% logic, 85.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/AFIFO1/mem_FF_639 (SLICE_X45Y63.A2), 16 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.185ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Wp_0 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_639 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.743ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.248ns (1.144 - 1.392)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Wp_0 to afifo_test/AFIFO1/mem_FF_639
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y35.AMUX    Tshcko                0.525   afifo_test/AFIFO1/W_bin<4>
+                                                       afifo_test/AFIFO1/Wp_0
+    SLICE_X38Y38.B4      net (fanout=900)      0.883   afifo_test/AFIFO1/Wp<0>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X45Y63.A2      net (fanout=161)      2.332   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X45Y63.CLK     Tas                   0.075   afifo_test/AFIFO1/mem_ff_639
+                                                       afifo_test/AFIFO1/mem_FF_639_dpot
+                                                       afifo_test/AFIFO1/mem_FF_639
+    -------------------------------------------------  ---------------------------
+    Total                                      5.743ns (0.915ns logic, 4.828ns route)
+                                                       (15.9% logic, 84.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.355ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Rp_wclk_2 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_639 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.570ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.251ns (1.144 - 1.395)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Rp_wclk_2 to afifo_test/AFIFO1/mem_FF_639
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y38.CQ      Tcko                  0.433   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/Rp_wclk_2
+    SLICE_X38Y38.B1      net (fanout=1)        0.802   afifo_test/AFIFO1/Rp_wclk<2>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X45Y63.A2      net (fanout=161)      2.332   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X45Y63.CLK     Tas                   0.075   afifo_test/AFIFO1/mem_ff_639
+                                                       afifo_test/AFIFO1/mem_FF_639_dpot
+                                                       afifo_test/AFIFO1/mem_FF_639
+    -------------------------------------------------  ---------------------------
+    Total                                      5.570ns (0.823ns logic, 4.747ns route)
+                                                       (14.8% logic, 85.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.582ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               afifo_test/AFIFO1/Wp_2 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_639 (FF)
+  Requirement:          6.250ns
+  Data Path Delay:      5.347ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.247ns (1.144 - 1.391)
+  Source Clock:         CLK2 rising at 0.000ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.074ns
+
+  Clock Uncertainty:          0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.130ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: afifo_test/AFIFO1/Wp_2 to afifo_test/AFIFO1/mem_FF_639
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y34.BQ      Tcko                  0.433   afifo_test/AFIFO1/Wp<4>
+                                                       afifo_test/AFIFO1/Wp_2
+    SLICE_X38Y38.B6      net (fanout=10)       0.579   afifo_test/AFIFO1/Wp<2>
+    SLICE_X38Y38.B       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/full5_SW0
+    SLICE_X38Y38.A4      net (fanout=23)       0.419   N64
+    SLICE_X38Y38.A       Tilo                  0.105   afifo_test/AFIFO1/Rp_wclk<3>
+                                                       afifo_test/AFIFO1/enq_full_AND_3_o1
+    SLICE_X45Y24.B4      net (fanout=11)       1.194   afifo_test/AFIFO1/enq_full_AND_3_o
+    SLICE_X45Y24.B       Tilo                  0.105   afifo_test/AFIFO1/mem_ff_578
+                                                       afifo_test/AFIFO1/mem_ClockEnableEqn_51211
+    SLICE_X45Y63.A2      net (fanout=161)      2.332   afifo_test/AFIFO1/mem_ClockEnableEqn_5121
+    SLICE_X45Y63.CLK     Tas                   0.075   afifo_test/AFIFO1/mem_ff_639
+                                                       afifo_test/AFIFO1/mem_FF_639_dpot
+                                                       afifo_test/AFIFO1/mem_FF_639
+    -------------------------------------------------  ---------------------------
+    Total                                      5.347ns (0.823ns logic, 4.524ns route)
+                                                       (15.4% logic, 84.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PERIOD analysis for net "gen/clkgen2/CLK_OBUF" derived from
+ NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;
+ divided by 1.60 to 6.250 nS  
+
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/AFIFO1/mem_FF_499 (SLICE_X34Y52.A5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.144ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               afifo_test/write_side1/write_data_51 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_499 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.344ns (Levels of Logic = 1)
+  Clock Path Skew:      0.200ns (0.785 - 0.585)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: afifo_test/write_side1/write_data_51 to afifo_test/AFIFO1/mem_FF_499
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y45.DQ      Tcko                  0.141   afifo_test/write_side1/write_data<51>
+                                                       afifo_test/write_side1/write_data_51
+    SLICE_X34Y52.A5      net (fanout=19)       0.278   afifo_test/write_side1/write_data<51>
+    SLICE_X34Y52.CLK     Tah         (-Th)     0.075   afifo_test/AFIFO1/mem_ff_502
+                                                       afifo_test/AFIFO1/mem_FF_499_dpot
+                                                       afifo_test/AFIFO1/mem_FF_499
+    -------------------------------------------------  ---------------------------
+    Total                                      0.344ns (0.066ns logic, 0.278ns route)
+                                                       (19.2% logic, 80.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/AFIFO1/mem_FF_1008 (SLICE_X30Y50.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.145ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               afifo_test/write_side1/write_data_48 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_1008 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.346ns (Levels of Logic = 1)
+  Clock Path Skew:      0.201ns (0.786 - 0.585)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: afifo_test/write_side1/write_data_48 to afifo_test/AFIFO1/mem_FF_1008
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y45.AQ      Tcko                  0.141   afifo_test/write_side1/write_data<51>
+                                                       afifo_test/write_side1/write_data_48
+    SLICE_X30Y50.B5      net (fanout=19)       0.281   afifo_test/write_side1/write_data<48>
+    SLICE_X30Y50.CLK     Tah         (-Th)     0.076   afifo_test/AFIFO1/mem_ff_1010
+                                                       afifo_test/AFIFO1/mem_FF_1008_dpot
+                                                       afifo_test/AFIFO1/mem_FF_1008
+    -------------------------------------------------  ---------------------------
+    Total                                      0.346ns (0.065ns logic, 0.281ns route)
+                                                       (18.8% logic, 81.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point afifo_test/AFIFO1/mem_FF_885 (SLICE_X35Y53.C6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.149ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               afifo_test/write_side1/write_data_53 (FF)
+  Destination:          afifo_test/AFIFO1/mem_FF_885 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.348ns (Levels of Logic = 1)
+  Clock Path Skew:      0.199ns (0.784 - 0.585)
+  Source Clock:         CLK2 rising at 6.250ns
+  Destination Clock:    CLK2 rising at 6.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: afifo_test/write_side1/write_data_53 to afifo_test/AFIFO1/mem_FF_885
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y46.BQ      Tcko                  0.141   afifo_test/write_side1/write_data<55>
+                                                       afifo_test/write_side1/write_data_53
+    SLICE_X35Y53.C6      net (fanout=19)       0.254   afifo_test/write_side1/write_data<53>
+    SLICE_X35Y53.CLK     Tah         (-Th)     0.047   afifo_test/AFIFO1/mem_ff_886
+                                                       afifo_test/AFIFO1/mem_FF_885_dpot
+                                                       afifo_test/AFIFO1/mem_FF_885
+    -------------------------------------------------  ---------------------------
+    Total                                      0.348ns (0.094ns logic, 0.254ns route)
+                                                       (27.0% logic, 73.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "gen/clkgen2/CLK_OBUF" derived from
+ NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;
+ divided by 1.60 to 6.250 nS  
+
+--------------------------------------------------------------------------------
+Slack: 4.658ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: gen/clkgen2/obuf/I0
+  Logical resource: gen/clkgen2/obuf/I0
+  Location pin: BUFGCTRL_X0Y30.I0
+  Clock network: gen/clkgen2/CLK_OBUF
+--------------------------------------------------------------------------------
+Slack: 5.001ns (period - min period limit)
+  Period: 6.250ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: gen/clkgen2/dcm/CLKOUT0
+  Logical resource: gen/clkgen2/dcm/CLKOUT0
+  Location pin: MMCME2_ADV_X1Y2.CLKOUT0
+  Clock network: gen/clkgen2/CLK_OBUF
+--------------------------------------------------------------------------------
+Slack: 5.250ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 6.250ns
+  Low pulse: 3.125ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: afifo_test/write_side1/write_data<55>/CLK
+  Logical resource: afifo_test/write_side1/write_data_52/CK
+  Location pin: SLICE_X36Y46.CLK
+  Clock network: CLK2
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "gen/clkgen1/CLK0" derived from  NET 
+"gen/clk_t" PERIOD = 10 ns HIGH 50%;  duty cycle corrected to 10 nS  HIGH 5 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.592ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "gen/clkgen1/CLK0" derived from
+ NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;
+ duty cycle corrected to 10 nS  HIGH 5 nS 
+
+--------------------------------------------------------------------------------
+Slack: 8.408ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: gen/clkgen1/fbuf/I0
+  Logical resource: gen/clkgen1/fbuf/I0
+  Location pin: BUFGCTRL_X0Y0.I0
+  Clock network: gen/clkgen1/CLK0
+--------------------------------------------------------------------------------
+Slack: 8.751ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKFBOUT(Foutmax))
+  Physical resource: gen/clkgen1/dcm/CLKFBOUT
+  Logical resource: gen/clkgen1/dcm/CLKFBOUT
+  Location pin: MMCME2_ADV_X1Y1.CLKFBOUT
+  Clock network: gen/clkgen1/CLK0
+--------------------------------------------------------------------------------
+Slack: 203.360ns (max period limit - period)
+  Period: 10.000ns
+  Max period limit: 213.360ns (4.687MHz) (Tmmcmper_CLKFBOUT(Foutmin))
+  Physical resource: gen/clkgen1/dcm/CLKFBOUT
+  Logical resource: gen/clkgen1/dcm/CLKFBOUT
+  Location pin: MMCME2_ADV_X1Y1.CLKFBOUT
+  Clock network: gen/clkgen1/CLK0
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "gen/clkgen2/CLK0" derived from  NET 
+"gen/clk_t" PERIOD = 10 ns HIGH 50%;  duty cycle corrected to 10 nS  HIGH 5 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.592ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "gen/clkgen2/CLK0" derived from
+ NET "gen/clk_t" PERIOD = 10 ns HIGH 50%;
+ duty cycle corrected to 10 nS  HIGH 5 nS 
+
+--------------------------------------------------------------------------------
+Slack: 8.408ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: gen/clkgen2/fbuf/I0
+  Logical resource: gen/clkgen2/fbuf/I0
+  Location pin: BUFGCTRL_X0Y31.I0
+  Clock network: gen/clkgen2/CLK0
+--------------------------------------------------------------------------------
+Slack: 8.751ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKFBOUT(Foutmax))
+  Physical resource: gen/clkgen2/dcm/CLKFBOUT
+  Logical resource: gen/clkgen2/dcm/CLKFBOUT
+  Location pin: MMCME2_ADV_X1Y2.CLKFBOUT
+  Clock network: gen/clkgen2/CLK0
+--------------------------------------------------------------------------------
+Slack: 203.360ns (max period limit - period)
+  Period: 10.000ns
+  Max period limit: 213.360ns (4.687MHz) (Tmmcmper_CLKFBOUT(Foutmin))
+  Physical resource: gen/clkgen2/dcm/CLKFBOUT
+  Logical resource: gen/clkgen2/dcm/CLKFBOUT
+  Location pin: MMCME2_ADV_X1Y2.CLKFBOUT
+  Clock network: gen/clkgen2/CLK0
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for gen/clk_t
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|gen/clk_t                      |     10.000ns|      4.000ns|      9.930ns|            0|            0|            0|       261699|
+| gen/clkgen1/CLK_OBUF          |     12.500ns|     11.376ns|          N/A|            0|            0|       132352|            0|
+| gen/clkgen2/CLK_OBUF          |      6.250ns|      6.206ns|          N/A|            0|            0|       129347|            0|
+| gen/clkgen1/CLK0              |     10.000ns|      1.592ns|          N/A|            0|            0|            0|            0|
+| gen/clkgen2/CLK0              |     10.000ns|      1.592ns|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK_IN
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_IN         |    7.729|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 261699 paths, 0 nets, and 13128 connections
+
+Design statistics:
+   Minimum period:  11.376ns{1}   (Maximum frequency:  87.904MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed WED 12 NOV 22:4:6 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 639 MB
+
+
+

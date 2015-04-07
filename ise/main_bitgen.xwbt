@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\mierusys\afifo_test3\ise\main.ncd
+OUTFILE=C:\mierusys\afifo_test3\ise\main.bit
+FAMILY=Artix7
+PART=xc7a100t-2csg324
+WORKINGDIR=C:\mierusys\afifo_test3\ise
+LICENSE=ISE
+USER_INFO=174123318_174133242_210568568_002
